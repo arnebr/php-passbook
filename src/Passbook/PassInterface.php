@@ -250,6 +250,15 @@ interface PassInterface extends ArrayableInterface
     /**
      * {@inheritdoc}
      */
+    public function setGroupingIdentifier($groupingIdentifier);
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getGroupingIdentifier();
+     /**
+     * {@inheritdoc}
+     */
     public function setTeamIdentifier($teamIdentifier);
 
     /**
