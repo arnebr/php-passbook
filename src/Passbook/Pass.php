@@ -204,6 +204,13 @@ class Pass implements PassInterface
      * @var string
      */
     protected $teamIdentifier;
+    
+     /**
+     * Group identifier
+     *
+     * @var string
+     */
+    protected $groupingIdentifier;
 
     /**
      * Organization name
@@ -272,6 +279,7 @@ class Pass implements PassInterface
             'webServiceURL',
             'passTypeIdentifier',
             'teamIdentifier',
+            'groupingIdentifier',
             'organizationName',
             'expirationDate',
             'voided',
@@ -720,6 +728,23 @@ class Pass implements PassInterface
     public function setTeamIdentifier($teamIdentifier)
     {
         $this->teamIdentifier = $teamIdentifier;
+
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getGroupingIdentifier()
+    {
+        return $this->groupingIdentifier;
+    }
+    /**
+     * {@inheritdoc}
+     */
+    public function setGroupingIdentifier($groupingIdentifier)
+    {
+        $this->groupingIdentifier = $groupingIdentifier;
 
         return $this;
     }
